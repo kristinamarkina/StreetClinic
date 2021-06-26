@@ -1,0 +1,39 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  dob: 2021-06-26
+  sex: MyString
+  ethnicity: MyString
+  prev_etoh_use: false
+  curr_etoh_use: false
+  etoh_notes: MyText
+  prev_smoking: false
+  curr_smoking: false
+  smoking_notes: MyText
+  prev_drug_use: false
+  curr_drug_use: false
+  drug_notes: MyText
+  illnesses: MyText
+  surgeries: MyText
+  allergies: MyText
+
+two:
+  first_name: MyString
+  last_name: MyString
+  dob: 2021-06-26
+  sex: MyString
+  ethnicity: MyString
+  prev_etoh_use: false
+  curr_etoh_use: false
+  etoh_notes: MyText
+  prev_smoking: false
+  curr_smoking: false
+  smoking_notes: MyText
+  prev_drug_use: false
+  curr_drug_use: false
+  drug_notes: MyText
+  illnesses: MyText
+  surgeries: MyText
+  allergies: MyText
