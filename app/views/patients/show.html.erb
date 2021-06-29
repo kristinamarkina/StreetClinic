@@ -1,0 +1,92 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @patient.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @patient.last_name %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @patient.dob %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @patient.sex %>
+</p>
+
+<p>
+  <strong>Ethnicity:</strong>
+  <%= @patient.ethnicity %>
+</p>
+
+<p>
+  <strong>Previous alcohol use:</strong>
+  <%= @patient.prev_etoh_use %>
+</p>
+
+<p>
+  <strong>Current alcohol use:</strong>
+  <%= @patient.curr_etoh_use %>
+</p>
+
+<p>
+  <strong>Alcohol use notes:</strong>
+  <%= @patient.etoh_notes %>
+</p>
+
+<p>
+  <strong>Previous smoking:</strong>
+  <%= @patient.prev_smoking %>
+</p>
+
+<p>
+  <strong>Current smoking:</strong>
+  <%= @patient.curr_smoking %>
+</p>
+
+<p>
+  <strong>Smoking notes:</strong>
+  <%= @patient.smoking_notes %>
+</p>
+
+<p>
+  <strong>Previous drug use:</strong>
+  <%= @patient.prev_drug_use %>
+</p>
+
+<p>
+  <strong>Current drug use:</strong>
+  <%= @patient.curr_drug_use %>
+</p>
+
+<p>
+  <strong>Drud use notes:</strong>
+  <%= @patient.drug_notes %>
+</p>
+
+<p>
+  <strong>Illnesses:</strong>
+  <%= @patient.illnesses %>
+</p>
+
+<p>
+  <strong>Surgeries: </strong>
+  <%= @patient.surgeries %>
+</p>
+
+<p>
+  <strong>Allergies:</strong>
+  <%= @patient.allergies %>
+</p>
+
+<div>
+  ----------------------
+</div>
+<%= link_to 'Edit', edit_patient_path(@patient) %> |
+<%= link_to 'Back', patients_path %>
