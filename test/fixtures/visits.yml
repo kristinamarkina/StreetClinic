@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  visit_datetime: 2021-06-30 19:00:42
+  temperature: 1.5
+  height: 1.5
+  weight: 1.5
+  pulse: 1
+  bp_sys: 1
+  bd_dia: 1
+  complaint: MyText
+  referrals: MyText
+
+two:
+  visit_datetime: 2021-06-30 19:00:42
+  temperature: 1.5
+  height: 1.5
+  weight: 1.5
+  pulse: 1
+  bp_sys: 1
+  bd_dia: 1
+  complaint: MyText
+  referrals: MyText
