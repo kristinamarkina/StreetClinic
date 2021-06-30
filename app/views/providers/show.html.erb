@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @provider.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @provider.last_name %>
+</p>
+
+<p>
+  <strong>Specialty:</strong>
+  <%= @provider.specialty %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @provider.sex %>
+</p>
+
+<p>
+  <strong>Languages:</strong>
+  <%= @provider.languages %>
+</p>
+
+<div>
+  ----------------------
+</div>
+<%= link_to 'Edit', edit_provider_path(@provider) %> |
+<%= link_to 'Back', providers_path %>
