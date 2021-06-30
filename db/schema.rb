@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_30_230041) do
+ActiveRecord::Schema.define(version: 2021_06_30_231325) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,10 @@ ActiveRecord::Schema.define(version: 2021_06_30_230041) do
     t.text "referrals"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "patient_id"
+    t.integer "provider_id"
+    t.index ["patient_id"], name: "index_visits_on_patient_id"
+    t.index ["provider_id"], name: "index_visits_on_provider_id"
   end
 
 end
