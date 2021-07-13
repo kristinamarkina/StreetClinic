@@ -3,8 +3,5 @@ Rails.application.routes.draw do
   root to: "home#index"
   resources :providers
   resources :patients
-  resources :visits #nest?
+  resources :visits
 end
-# devise for authentification
-# cancancan? authorization
-# pundit? -.-.-
