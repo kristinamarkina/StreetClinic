@@ -11,10 +11,13 @@
   </head>
 
   <body>
+
     <%= render 'shared/navbar' %>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+    <%= image_tag("logos/cartoon.jpg", style: 'width:100%') %>
   </body>
 </html>
 
