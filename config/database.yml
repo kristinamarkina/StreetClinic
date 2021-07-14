@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
-  database: StreetClinic_production
-  username: StreetClinic
-  password: <%= ENV['STREETCLINIC_DATABASE_PASSWORD'] %>
+#  database: StreetClinic_production
+#  username: StreetClinic
+#  password: <%#= ENV['STREETCLINIC_DATABASE_PASSWORD'] %>
+  url: <%= ENV.fetch("DATABASE_URL", "") %>
