@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1> Visits </h1>
+
+<style type="text/css">
+    td, h1, th
+    {
+        padding:0 15px;
+    }
+</style>
+
+<table>
+  <thead>
+  <tr>
+    <th>Patient name</th>
+    <th>Provider name</th>
+    <th>Visit date and time</th>
+    <th>Reason for visit</th>
+    <th colspan="5"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @visits.each do |visit| %>
+  <% patient = visit.patient %>
+    <% provider = visit.provider %>
+    <tr>
+      <td><%= patient.full_name %></td>
+      <td><%= provider.full_name %></td>
+      <td><%= visit.visit_datetime %></td>
+      <td><%= visit.complaint %></td>
+      <td><%= link_to 'Show', visit %></td>
+      <td><%= link_to 'Edit', edit_visit_path(visit) %></td>
+      <td><%= link_to 'Destroy', visit, method: :delete, data: { confirm: 'Are you sure?'} %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Visit', new_visit_path %>

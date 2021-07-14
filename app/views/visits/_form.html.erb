@@ -1,0 +1,79 @@
+<style type="text/css">
+    div, h1, h2, label, .field
+    {
+        padding:0 15px;
+    }
+</style>
+
+
+<%= form_for(visit) do |f| %>
+  <% if visit.errors.any? %>
+    <div id = 'error_explanation'>
+      <h2><%= pluralize(visit.errors.count, 'error') %> prohibited this visit from being saved:</h2>
+      <ul>
+        <% visit.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class = 'field'>
+    <%= f.label :visit_datetime, 'Visit date and time: ' %>
+    <%= f.datetime_field :visit_datetime, placeholder:'Date and time of visit' %>
+  </div>
+
+  <div class = 'field'>
+    <%= f.label :patient_id, 'Patient: ' %>
+    <%= f.collection_select :patient_id, Patient.all, :id, :full_name %>
+  </div>
+
+  <div class = 'field'>
+    <%= f.label :provider_id, 'Provider: ' %>
+    <%= f.collection_select :provider_id, Provider.all, :id, :full_name %>
+  </div>
+
+  <div class = 'field' >
+    <%= f.label :temperature, 'Body temperature in F: ' %>
+    <%= f.text_field :temperature %>
+  </div>
+
+  <div class = 'field' >
+    <%= f.label :height, 'Height in cm: ' %>
+    <%= f.text_field :height %>
+  </div>
+
+  <div class = 'field' >
+    <%= f.label :weight, 'Weight in kg: ' %>
+    <%= f.text_field :weight %>
+  </div>
+
+  <div class = 'field' >
+    <%= f.label :pulse, 'Pulse: ' %>
+    <%= f.number_field :pulse %>
+  </div>
+
+  <div class = 'field' >
+    <%= f.label :bp_sys, 'Systolic Blood Pressure : ' %>
+    <%= f.number_field :bp_sys %>
+  </div>
+
+  <div class = 'field' >
+    <%= f.label :bd_dia, 'Diastolic Blood Pressure: ' %>
+    <%= f.number_field :bd_dia %>
+  </div>
+
+  <div class = 'field' >
+    <%= f.label :complaint, 'Reason for visit:' %>
+    <%= f.text_area :complaint %>
+  </div>
+
+  <div class = 'field' >
+    <%= f.label :referrals, 'Referrals: ' %>
+    <%= f.text_area :referrals %>
+  </div>
+
+  <div class="action">
+    <%= f.submit %>
+  </div>
+<% end %>

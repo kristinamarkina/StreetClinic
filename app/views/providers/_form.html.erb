@@ -9,30 +9,35 @@
     </ul>
   </div>
 <% end %>
-
+  <style type="text/css">
+      h1, .field, label, text_field
+      {
+          padding:0 15px;
+      }
+  </style>
 <div class="field">
-  <%= f.label :first_name %>
+  <%= f.label :first_name, 'First name: ' %>
   <%= f.text_field :first_name %>
 </div>
 
 <div class="field">
-  <%= f.label :last_name %>
+  <%= f.label :last_name, 'Last name: ' %>
   <%= f.text_field :last_name %>
 </div>
 
+  <div class="field">
+    <%= f.label :specialty, 'Specialty: ' %>
+    <%= f.text_field :specialty %>
+  </div>
+
 <div class="field">
-  <%= f.label :sex %>
+  <%= f.label :sex, 'Sex: ' %>
   <%= f.select :sex, %w[Male Female] %>
 </div>
 
 <div class="field">
-  <%= f.label :languages %>
+  <%= f.label :languages, 'Languages spoken' %>
   <%= f.select :languages, %w[English Spanish] %>
-</div>
-
-<div class="field">
-  <%= f.label :specialty %>
-  <%= f.text_field :specialty %>
 </div>
 
 <div class="actions">

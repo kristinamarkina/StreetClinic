@@ -1,0 +1,65 @@
+<p id='notice'><%= notice %></p>
+
+<style type="text/css">
+    h1, p
+    {
+        padding:0 15px;
+    }
+</style>
+
+<p>
+  <strong>Patient: </strong>
+  <%= @visit.patient.full_name %>
+</p>
+
+<p>
+  <strong>Provider: </strong>
+  <%= @visit.provider.full_name %>
+</p>
+
+<p>
+  <strong>Body temperature in F: </strong>
+  <%= @visit.temperature %>
+</p>
+
+<p>
+  <strong>Height in cm:</strong>
+  <%= @visit.height %>
+</p>
+
+<p>
+  <strong>Weight in kg:</strong>
+  <%= @visit.weight %>
+</p>
+
+<p>
+  <strong>Pulse: </strong>
+  <%= @visit.pulse %>
+</p>
+
+<p>
+  <strong>Systolic Blood Pressure:</strong>
+  <%= @visit.bp_sys %>
+</p>
+
+<p>
+  <strong>Diastolic Blood Pressure: </strong>
+  <%= @visit.bd_dia %>
+</p>
+
+<p>
+  <strong>Reason for visit: </strong>
+  <%= @visit.complaint %>
+</p>
+
+<p>
+  <strong>Referrals: </strong>
+  <%= @visit.referrals %>
+</p>
+
+<div>
+  ------------
+</div>
+
+<%= link_to 'Edit', edit_visit_path(@visit) %>
+<%= link_to 'Back', visits_path %>

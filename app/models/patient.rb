@@ -9,4 +9,13 @@ class Patient < ApplicationRecord
       errors.add(:dob, "can't be in the future")
     end
   end
+
+  def full_name
+    [first_name, last_name].select(&:present?).join(' ').titleize
+  end
+
+  def age
+    now = Date.today
+    now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
+  end
 end

@@ -1,24 +1,27 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Patients</h1>
-
+<style type="text/css">
+    td, th, h1
+    {
+        padding:0 15px;
+    }
+</style>
 <table>
   <thead>
   <tr>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Date of Birth</th>
-    <th>Ethnicity</th>
-    <th colspan="3"></th>
+    <th> Full name </th>
+    <th> Age </th>
+    <th> Ethnicity </th>
+    <th colspan="6"></th>
   </tr>
   </thead>
 
   <tbody>
   <% @patients.each do |patient| %>
     <tr>
-      <td><%= patient.first_name %></td>
-      <td><%= patient.last_name %></td>
-      <td><%= patient.dob %></td>
+      <td><%= patient.full_name %></td>
+      <td><%= patient.age %></td>
       <td><%= patient.ethnicity %></td>
       <td><%= link_to 'Show', patient %></td>
       <td><%= link_to 'Edit', edit_patient_path(patient) %></td>

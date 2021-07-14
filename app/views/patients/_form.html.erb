@@ -2,7 +2,6 @@
   <% if patient.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(patient.errors.count, "error") %> prohibited this customer from being saved:</h2>
-
       <ul>
         <% patient.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -10,89 +9,94 @@
       </ul>
     </div>
   <% end %>
-
+  <style type="text/css">
+      h1, .field, label, text_field
+      {
+          padding:0 15px;
+      }
+  </style>
   <div class="field">
-    <%= f.label :first_name %>
+    <%= f.label :first_name, 'First name: ' %>
     <%= f.text_field :first_name %>
   </div>
 
   <div class="field">
-    <%= f.label :last_name %>
+    <%= f.label :last_name, 'Last name: ' %>
     <%= f.text_field :last_name %>
   </div>
 
   <div class="field">
-    <%= f.label :dob %>
-    <%= f.date_field :dob %>
+    <%= f.label :dob, 'Date of birth: ' %>
+    <%= f.date_field :dob%>
   </div>
 
   <div class="field">
-    <%= f.label :sex %>
+    <%= f.label :sex, 'Sex: ' %>
     <%= f.select :sex, %w[Male Female] %>
   </div>
 
   <div class="field">
-    <%= f.label :ethnicity %>
-    <%= f.select :ethnicity, %w[Asian Black White] %>
+    <%= f.label :ethnicity, 'Race: ' %>
+    <%= f.select :ethnicity, ['American Indian or Alaska Native', 'Asian', 'Black or African American', 'Native Hawaiian or Other Pacific Islander', 'White'] %>
   </div>
 
   <div class="field">
-    <%= f.label :prev_etoh_use %>
+    <%= f.label :prev_etoh_use, 'Previous alcohol use: ' %>
     <%= f.select :prev_etoh_use, [true, false] %>
   </div>
 
   <div class="field">
-    <%= f.label :curr_etoh_use %>
+    <%= f.label :curr_etoh_use, 'Current alcohol use: ' %>
     <%= f.select :curr_etoh_use, [true, false] %>
   </div>
 
   <div class="field">
-    <%= f.label :etoh_notes %>
+    <%= f.label :etoh_notes, 'Alcohol use notes: ' %>
     <%= f.text_field :etoh_notes %>
   </div>
 
   <div class="field">
-    <%= f.label :prev_smoking %>
+    <%= f.label :prev_smoking, 'Previous smoking: ' %>
     <%= f.select :prev_smoking, [true, false] %>
   </div>
 
   <div class="field">
-    <%= f.label :curr_smoking %>
+    <%= f.label :curr_smoking, 'Current smoking: ' %>
     <%= f.select :curr_smoking, [true, false] %>
   </div>
 
   <div class="field">
-    <%= f.label :smoking_notes %>
+    <%= f.label :smoking_notes, 'Smoking notes: ' %>
     <%= f.text_field :smoking_notes %>
   </div>
 
   <div class="field">
-    <%= f.label :prev_drug_use %>
+    <%= f.label :prev_drug_use, 'Previous drug use: ' %>
     <%= f.select :prev_drug_use, [true, false] %>
   </div>
 
   <div class="field">
-    <%= f.label :curr_drug_use %>
+    <%= f.label :curr_drug_use, 'Current drug use: ' %>
     <%= f.select :curr_drug_use, [true, false] %>
   </div>
 
   <div class="field">
-    <%= f.label :drug_notes %>
+    <%= f.label :drug_notes, 'Drug notes: ' %>
     <%= f.text_field :drug_notes %>
   </div>
 
   <div class="field">
-    <%= f.label :illnesses %>
+    <%= f.label :illnesses, 'Illnesses: ' %>
     <%= f.text_field :illnesses %>
   </div>
 
   <div class="field">
-    <%= f.label :surgeries %>
+    <%= f.label :surgeries, 'Surgeries: ' %>
     <%= f.text_field :surgeries %>
   </div>
 
   <div class="field">
-    <%= f.label :allergies %>
+    <%= f.label :allergies, 'Allergies: ' %>
     <%= f.text_field :allergies %>
   </div>
 

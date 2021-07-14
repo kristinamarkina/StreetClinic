@@ -2,11 +2,17 @@
 
 <h1>Providers</h1>
 
+<style type="text/css">
+    td, th, h1
+    {
+        padding:0 15px;
+    }
+</style>
+
 <table>
   <thead>
   <tr>
-    <th>First name</th>
-    <th>Last name</th>
+    <th>Full name</th>
     <th>Specialty</th>
     <th>Sex</th>
     <th>Languages</th>
@@ -17,8 +23,7 @@
   <tbody>
   <% @providers.each do |provider| %>
   <tr>
-    <td><%= provider.first_name %></td>
-    <td><%= provider.last_name %></td>
+    <td><%= provider.full_name %></td>
     <td><%= provider.specialty %></td>
     <td><%= provider.sex %></td>
     <td><%= provider.languages %></td>
